@@ -1,0 +1,12 @@
+{
+    "name": "gaozhan/oauth",
+    "description": "oauth test",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "oauth\\": "src/"
+        }
+    }
+}
