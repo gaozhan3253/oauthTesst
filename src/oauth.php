@@ -18,11 +18,11 @@ abstract class oauth{
     protected $callBackUrl = '';  //回调地址url
     protected $config;  //配置
 
-    public function __construct($config)
+    public function __construct($config=[])
     {
         //获取应用配置
         if(empty($config['APP_KEY']) || empty($config['APP_SECRET'])){
-            throw new Exception('请配置您申请的APP_KEY和APP_SECRET');
+            throw new \Exception('请配置您申请的APP_KEY和APP_SECRET');
         } else {
             $this->AppKey    = $config['APP_KEY'];
             $this->AppSecret = $config['APP_SECRET'];
@@ -41,7 +41,7 @@ abstract class oauth{
         try{
             $this->Token = $this->parseToken($data);
             return $this->Token;
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             die($e->getMessage());
         }
 

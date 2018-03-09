@@ -18,7 +18,7 @@ class gaozhanOauth extends oauth{
         if($data['code'] == 0 && !empty($data['data'])){
             return $data['data'];
         }else{
-            throw new Exception("获取accessToken失败：{$data['message']}");
+            throw new \Exception("获取accessToken失败：{$data['message']}");
         }
     }
 
